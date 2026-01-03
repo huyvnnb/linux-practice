@@ -12,13 +12,13 @@
 # n thu
 
 mkdir -p /KMA
-echo "Mot ngay tot lanh" >> /KMA/svktmm.txt
+echo "Mot ngay tot lanh" > /KMA/svktmm.txt
 
-echo "Ten: Nguyen Quang Huy" >> /KMA/svktmm..txt
+echo "Ten: Nguyen Quang Huy" >> /KMA/svktmm.txt
 
 echo "Noi dung file sau khi chinh sua"
 cat /KMA/svktmm.txt
 
 # Nen file
-bzip2 -c /KMA/svktmm.txt > /KMA/kma.bz2
+tar -cjvf kma.tar.gz /KMA
 

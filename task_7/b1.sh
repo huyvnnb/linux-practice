@@ -16,12 +16,12 @@ echo "user1:abc@123" | chpasswd
 groupadd group1
 usermod -aG group1 user1
 
-id user1
-getent group group1 | cut -d: -f3
+getent passwd user1 | cut -d ':' -f3
+getent group group1 | cut -d ':' -f3
 
 getent passwd user1 | cut -d: -f6
 
-touch "Noi dung file.txt" >> /home/user1/file1.txt
+echo "Noi dung file.txt" > /home/user1/file1.txt
 cat /home/user1/file1.txt
 
 ls -l /home/user1/file1.txt

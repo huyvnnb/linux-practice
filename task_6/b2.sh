@@ -18,15 +18,18 @@ free -h
 lscpu
 
 # Kiểm tra ip và subnet mask
-ip addr show ens33
+ip addr
 
 # Thay doi cau hinh IP
 ip addr flush dev ens33
-ip addr add 192.168.0.0/16 dev ens33
+ip addr add 172.16.10.10/16 dev ens33
+ip link set dev ens33 up
+ip addr show ens33
 
 # Kiem tra MTU
 ip link show dev ens33
 ip link set dev ens33 mtu 1000
+ip link show dev ens33
 
 
 echo "Day la file test" > filetest.txt

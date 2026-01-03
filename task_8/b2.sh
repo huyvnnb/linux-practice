@@ -32,9 +32,9 @@ free -h
 # Kiem tra o dia
 df -h
 
-mkdir -p test.txt
+touch test.txt
 ls -l test.txt
 
-echo "Ghi noi dung cho file test.txt" >> test.txt
+echo "Ghi noi dung cho file test.txt" > test.txt
 
 gzip test.txt

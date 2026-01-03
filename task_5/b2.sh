@@ -16,17 +16,17 @@ useradd -m -s /bin/bash User123
 echo "User123:2711" | chpasswd
 
 groupadd G123
+usermod -aG G123 User123
 
 mkdir -p /KMA
-touch /KMA/test2.txt
+echo "Noi dung file" > /KMA/test2.txt
+ls -l /KMA/test2.txt
 
-ls -ld /KMA/test2.txt
-
-chown User123:G123 /KMA/test2.txt
+chown root:G123 /KMA
 chmod 550 /KMA/test2.txt
 
 # nen
-gzip -c /KMA/test2.txt > /KMA/filenen.gz
+su - User123 -c "gzip -c /KMA/test2.txt > /KMA/filenen.gz"
 
 # Hien thi tien trinh
 ps aux

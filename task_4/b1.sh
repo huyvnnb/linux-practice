@@ -15,19 +15,23 @@ U1_PATH="/home/U1"
 
 echo "U1:abc@123" | chpasswd
 
-echo "Noi dung file F1.txtx" >> '$U1_PATH/F1.txt'
-if [ -f '$U1_PATH/F1.txt' ]; then
-    echo "TOn tai file F1.txt"
+echo "Noi dung file F1.txtx" > "$U1_PATH/F1.txt"
+if [ -f "$U1_PATH/F1.txt" ]; then
+    echo "Ton tai file F1.txt"
 else
     echo "Khong ton tai F1.txt"
 fi
 
-echo "Noi dung file f1.txt" >> '$U1_PATH/f1.txt'
-if [ -f '$U1_PATH/f1.txt' ]; then
+echo "Noi dung file f1.txt" > "$U1_PATH/f1.txt"
+if [ -f "$U1_PATH/f1.txt" ]; then
     echo "Ton tai file f1.txt"
 else
     echo "Khong ton tai f1.txt"
 fi 
 
-ls -ld $U1_PATH/F1.txt
-ls -ld $U1_PATH/f1.txt
+ls -l "$U1_PATH/F1.txt"
+ls -l "$U1_PATH/f1.txt"
+
+# Giai thich:
+# Linux phan biet chu hoa va chu thuong
+# F1.txt va f1.txt la hai tap tin khac nhau

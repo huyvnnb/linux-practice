@@ -12,6 +12,8 @@
 # - Xem thuộc tính tập tin file1.txt, giải thích ý nghĩa thuộc tính
 
 useradd -m -s /bin/bash user1
+echo "user1:password" | chpasswd
+
 groupadd group1
 
 usermod -aG group1 user1
@@ -20,12 +22,12 @@ echo "User id"
 getent passwd user1 | cut -d ':' -f3
 
 echo "Group id"
-getent passwd user1 | cut -d ':' -f4
+getent group group1 | cut -d ':' -f3
 
 echo "Home directory"
-getent passwd user1 | cut -d ':' -f 7
+getent passwd user1 | cut -d ':' -f7
 
-echo "Noi dung file1.txt" >> /home/user1/file1.txt
+echo "Noi dung file1.txt" > /home/user1/file1.txt
 cat /home/user1/file1.txt
 
-ls -ld /home/user1/file1.txt
+ls -l /home/user1/file1.txt

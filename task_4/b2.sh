@@ -13,9 +13,9 @@
 
 mkdir -p /KMA/Baitap
 
-echo "Noi dung vanban2.txt" >> /KMA/Baitap/vanban2.txt
+echo "Noi dung vanban2.txt" > /KMA/Baitap/vanban2.txt
 
-ls -ld /KMA/Baitap/vanban2.txt
+ls -l /KMA/Baitap/vanban2.txt
 
 chmod 744 /KMA/Baitap/vanban2.txt
 ls -ld /KMA/Baitap/vanban2.txt
@@ -33,4 +33,4 @@ else
 fi
 
 # Xem dia chi mang va dia chi quang ba cua may
-ip addr show ens33
+ip addr

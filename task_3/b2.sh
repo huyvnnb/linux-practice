@@ -6,7 +6,9 @@
 # - Đặt IP tĩnh trên máy chú Linux (dùng lệnh hoặc network tool) 192.168.0.100/255.255.255.0
 # - Kiếm tra địa chỉ mạng trên máy cục bộ (IP of Localhost)
 # - Kiếm tra thông mạng tới máy vật lý (hoặc máy khác trong mạng LAN)
-# - Thay đổi thành địa chỉ IP mới: 192.168.1.200/ 255.255.255.252
+# - Thay đổi thành địa chỉ IP mới: 192.168.1.200/ 255.25
+
+5.255.252
 # - Kiếm tra lại IP sau khi đã thay đổi
 # - Để tài một file từ trang download.net/file1 thì user dùng lệnh nào (gõ trong file script có thể
 # để dạng comment nều máy không có mạng)

@@ -33,7 +33,7 @@ setfacl -m u:user456:rw /baitap/test.txt
 
 ls -ld /baitap
 
-tar -czvf /baitap baitap.tar.gz
+tar -czvf baitap.tar.gz /baitap
 
 # Đổi username
 # 1. Đổi username: usermod

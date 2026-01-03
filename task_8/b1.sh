@@ -13,13 +13,13 @@
 lsblk
 
 mkdir -p /KMA/data
-echo "Noi dung file trong thu muc /KMA/data" >> /KMA/data/file.txt
+# echo "Noi dung file trong thu muc /KMA/data" > /KMA/data/file.txt
 
 mount /dev/cdrom /KMA/data
 
-cp /KMA/data/file.txt /
+cp /KMA/data/upgrade.sh /
 
-if [ -f /file.txt ]; then
+if [ -f /upgrade.sh ]; then
     echo "File ton tai trong root"
 else
     echo "File khong ton tai trong root"
