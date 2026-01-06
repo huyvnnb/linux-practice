@@ -16,16 +16,18 @@
 # ifconfig eth0 192.168.1.10 netmask 255.255.255.0
 # ip addr add 192.168.1.10/24 dev eth0
 
-ip addr flush dev ens33
+# ip addr flush dev ens33
 ip addr add 192.168.0.100/24 dev ens33
 ip link set ens33 up
 
 ip addr show ens33
 #ifconfig
 
-ping -c 5 127.0.0.1
+ping -c 5 192.168.100.129 
+# (địa chỉ IP của máy vật lý: cmd -> chạy ipconfig -> Wireless LAN adapter Wi-Fi -> IPv4 Address)
 
-ip addr flush dev ens33
+# ip addr flush dev ens33
+ip addr del 192.168.0.100/24 dev ens33
 ip addr add 192.168.1.200/30 dev ens33
 
 ip addr show ens33
